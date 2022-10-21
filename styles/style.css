@@ -15,13 +15,11 @@
   max-height: 756px;
   position: relative;
   background-color: #f2f2f2;
-  /* выше установили ограничения для секции */
-}
-.header_display_flex {
   display: flex;
   align-items: center;
+  /* выше установили ограничения для секции */
 }
-/* сделал flex-контейнер*/
+
 .logo {
   width: 228px;
   height: 32px;
@@ -37,30 +35,25 @@
 .header__title {
   width: 730px;
   height: 216px;
+  margin-left: 64px;
+  z-index: 3;
   font-size: 102px;
   font-weight: 600;
   font-style: normal;
   line-height: 96px;
 }
 
-.header__title_place_header {
-  margin-left: 64px;
-  z-index: 3;
-}
 .header__subtitle {
   width: 388px;
   height: 75px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
-}
-
-.header__subtitle_place_header {
   position: absolute;
   z-index: 3;
   left: 64px;
   bottom: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .header__link {
@@ -71,9 +64,6 @@
 .header__main-illustration {
   width: 765px;
   height: 608px;
-}
-
-.header__main-illustration_place_header {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -83,22 +73,15 @@
 .header__square-pic {
   height: 568px;
   width: 568px;
-  background-color: #2f80ed;
-}
-
-.header__square-pic_place_header {
   position: absolute;
   top: 64;
   right: 0;
   z-index: 1;
+  background-color: #2f80ed;
 }
-
 /*блок description*/
-.section {
+.description {
   width: 100%;
-}
-
-.section_indent_top-bottom {
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -130,13 +113,10 @@
   font-style: normal;
   font-weight: normal;
   line-height: 34px;
-}
-
-.two-columns__paragraph_indent_margin {
   margin: 0 0 30px 0;
 }
 
-.two-columns__paragraph_indent_margin:last-of-type {
+.two-columns__paragraph:last-of-type {
   margin-bottom: 0;
 }
 
@@ -144,14 +124,15 @@
   font-weight: bold;
 }
 /*блок digits*/
-.section_place_flex {
+.digits {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
 }
-.section__title {
+.section-title {
   width: 60%;
+  margin: 0;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
@@ -159,12 +140,9 @@
   text-align: center;
 }
 
-.section__title_margin_zero {
-  margin: 0;
-}
-
-.section__subtitle {
+.section-subtitle {
   width: 60%;
+  margin: 20px 0 0 0;
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
@@ -172,22 +150,15 @@
   text-align: center;
 }
 
-.section__subtitle_indent_margin {
-  margin: 20px 0 0 0;
-}
-
 .table {
   width: 1100px;
-}
-
-.table_place_flex {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 auto;
 }
 
-.table__cell_theme_white {
+.table__cell {
   width: 250px;
   margin-top: 60px;
 }
@@ -197,9 +168,6 @@
   font-style: normal;
   font-weight: 600;
   line-height: 1.15;
-}
-
-.table__heading_indent_margin {
   margin: 0;
 }
 
@@ -208,38 +176,30 @@
   font-style: normal;
   font-weight: normal;
   line-height: 1.2;
-}
-
-.table__text_indent_margin {
   margin: 20px 0 20px 0;
 }
 
-.table__text_indent_margin:last-of-type {
+.table__text:last-of-type {
   margin: 20px 0 0 0;
 }
 
 /* блок feynman*/
 .feynman {
-  height: 95vh;
-}
-
-.feynman_background_image {
-  background-image: url(/images/feynman.png);
-  background-color: #f2f2f2;
-  background-repeat: no-repeat;
-  background-size: 867px 637px;
-  background-position: left bottom;
-}
-
-.feynman_display_flex {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 890px;
+  background-image: url("../images/logo/feynman.png");
+  background-repeat: no-repeat;
+  background-size: 867px 637px;
+  background-position: left bottom;
+  background-color: #f2f2f2;
 }
 
 .feynman__title {
   width: 648px;
+  margin: 100px 0 0 0;
   font-size: 120px;
   font-style: normal;
   font-weight: 600;
@@ -247,22 +207,18 @@
   text-align: center;
 }
 
-.feynman__title_margin_top {
-  margin: 100px 0 0 0;
-}
-
 .feynman__subtitle {
+  margin: 70px 0 0 0;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
   line-height: 51px;
 }
 
-.feynman__subtitle_margin_top {
-  margin: 70px 0 0 0;
-}
-
 .feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -270,14 +226,11 @@
   text-decoration: none;
   color: #2f80ed;
 }
-
-.feynman__link_position_absolute {
-  position: absolute;
-  top: 50%;
-  right: 48px;
-}
-
-.section_theme_dark {
+/*блок kaufman*/
+.kaufman {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   overflow: hidden;
   background-color: #1f1f1f;
@@ -285,11 +238,11 @@
   margin-bottom: 0;
 }
 
-.section__title_theme_dark, .section__subtitle_theme_dark {
+.section-title_theme_dark, .section-subtitle_theme_dark {
   color: #f2f2f2;
   z-index: 1;
 }
-/* и элемента с модификатором вида ключ-значение */
+
 .table__cell_theme_dark {
   width: 200px;
   color: white;
@@ -309,7 +262,7 @@
   top: 0;
   right: -210px;
 }
-
+/*блок footer*/
 .footer {
   width: 100%;
   min-height: 350px;
